@@ -1,12 +1,12 @@
 package fsouza.studio.com.githubusermobilesearch;
 
-import android.app.Activity;
 import android.content.Intent;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-public class DisplayMessageActivity extends Activity {
+public class DisplayMessageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
