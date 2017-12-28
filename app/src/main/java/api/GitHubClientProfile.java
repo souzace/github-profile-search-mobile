@@ -4,7 +4,6 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 import retrofit2.http.QueryName;
 
@@ -16,6 +15,7 @@ import retrofit2.http.QueryName;
 
 
 public interface GitHubClientProfile {
-    @GET("/users/")
-    Call<List<GitHubProfile>> users(@QueryName(encoded = true) String... filters);
+    @GET("search/users")
+    Call<List<GitHubProfileItemsResponse>> users( @Query("q") String user,
+                                     @Query("in") String login);
 }

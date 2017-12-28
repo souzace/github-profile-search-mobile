@@ -15,12 +15,13 @@ import fsouza.studio.com.githubusermobilesearch.R;
  * Created by fsouza on 27/12/17.
  */
 
-public class GitHubProfileAdapter extends ArrayAdapter<GitHubProfile> {
+public class GitHubProfileAdapter extends ArrayAdapter<GitHubProfileItems> {
 
     private Context context;
-    private List<GitHubProfile> values;
+    private List<GitHubProfileItems> values;
 
-    public GitHubProfileAdapter(Context context, List<GitHubProfile> values) {
+    public GitHubProfileAdapter(Context context, List<GitHubProfileItems> values) {
+
         super(context, R.layout.list_item_pagination, values);
 
         this.context = context;
@@ -39,8 +40,8 @@ public class GitHubProfileAdapter extends ArrayAdapter<GitHubProfile> {
 
         TextView textView = (TextView) row.findViewById(R.id.list_item_pagination_text);
 
-        GitHubProfile item = values.get(position);
-        String message = item.getName();
+        GitHubProfileItems item = values.get(position);
+        String message = item.getLogin();
         textView.setText(message);
 
         return row;
