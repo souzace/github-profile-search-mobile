@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">GitHub User Profile Search</string>
-    <string name="edit_message">Enter a message</string>
-    <string name="button_send">Send</string>
+    <string name="internet">No Internet connection, Please make sure your device is connected to the internet</string>
 </resources>
